@@ -1,8 +1,12 @@
-let count = 0
 const value = document.getElementById("value")
-const decreaseBtn = document.getElementById("btn-decrease")
 const increaseBtn = document.getElementById("btn-increase")
-const resetBtn = document.getElementById("btn-reset")
+const decreaseBtn = document.getElementById("btn-decrease")
 
+let count = 0
+value.innerHTML = count
 
-console.log(counter)
+function increaseBtn () {
+count++;
+value.innerHTML = count
+}
+
