@@ -1,19 +1,31 @@
 let count = 0
+const decrease = document.getElementById('btnDecrease')
+const increment = document.getElementById('btnIncrease')
+const reset = document.getElementById('btnReset')
+const counter = document.getElementById('value')
 
-document.getElementById("btnDecrease").onclick = function() {
+decrease.onclick = function() {
     count -= 1
-    document.getElementById("value").innerHTML = count
-    console.log(count)
+    counter.innerHTML = count
+    if (count <= 0) {
+        counter.style.color = "crimson"
+    } else if (counter === 0) {
+        counter.style.color = "black"
+    }
 }
 
-document.getElementById("btnReset").onclick = function() {
+reset.onclick = function() {
     count = 0
-    document.getElementById("value").innerHTML = count
-    console.log(count)
+    counter.innerHTML = count
+    counter.style.color = "black"
 }
 
-document.getElementById("btnIncrease").onclick = function() {
+increment.onclick = function() {
     count += 1
-    document.getElementById("value").innerHTML = count
-    console.log(count)
+    counter.innerHTML = count
+    if (count > 0) {
+        counter.style.color = "green"
+    } else if (count === 0) {
+        counter.style.color = "black"
+    }
 }
