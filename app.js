@@ -7,9 +7,9 @@ const counter = document.getElementById('value')
 decrease.onclick = function() {
     count -= 1
     counter.innerHTML = count
-    if (count <= 0) {
+    if (count < 0) {
         counter.style.color = "crimson"
-    } else if (counter === 0) {
+    } else if (count === 0) {
         counter.style.color = "black"
     }
 }
